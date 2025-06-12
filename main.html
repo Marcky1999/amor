@@ -1,4 +1,5 @@
-<html lang="pt-br"> 
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -20,17 +21,25 @@
     }
 
     .swiper {
-      width: 90%;
-      max-width: 600px;
-      margin: 30px auto;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .swiper-slide img, .swiper-slide video {
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+    }
+
+    .swiper-slide img {
       width: 100%;
-      height: auto;
+      height: 400px;
+      object-fit: cover;
       display: block;
     }
 
@@ -60,29 +69,25 @@
     }
 
     iframe {
-    display: block;
-    width: 80%;
-    height: 152px;
-    margin: 20px auto 30px auto;
-    border-radius: 12px;
-    align-items: center;
-  }
+      display: block;
+      width: 80%;
+      height: 152px;
+      margin: 20px auto 30px auto;
+      border-radius: 12px;
+    }
 
-    /* Media Query para 640px */
-    @media (max-width: 640px) {
+    /* Media Query para até 768px */
+    @media (max-width: 768px) {
+      .swiper {
+        max-width: 95%;
+      }
+
       h1 {
-        font-size: 1.6rem;
-        padding: 0 12px;
+        font-size: 1.5rem;
       }
 
       .romantic-text {
         font-size: 1.1rem;
-        padding: 8px;
-      }
-
-      .swiper {
-        width: 95%;
-        margin: 20px auto;
       }
 
       iframe {
@@ -90,12 +95,11 @@
       }
     }
 
-    /* Media Query para 390px */
-    @media (max-width: 390px) {
+    /* Media Query para até 480px */
+    @media (max-width: 480px) {
       h1 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         margin-top: 15px;
-        padding: 0 8px;
       }
 
       .romantic-text {
@@ -103,19 +107,10 @@
         padding: 6px;
       }
 
-      .swiper {
-        width: 100%;
-        margin: 15px auto;
-      }
-
       .spotify-link {
         padding: 10px 20px;
         font-size: 0.9rem;
       }
-
-      iframe {
-        width: 90%;
-  }
     }
   </style>
 </head>
@@ -128,10 +123,8 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="img/casalApaixonado.jpeg" alt="Casal apaixonado"></div>
       <div class="swiper-slide"><img src="img/namorados.jpeg" alt="Romance ao pôr do sol"></div>
-      <div class="swiper-slide"><video controls>
-        <source src="img/WhatsApp Video 2025-06-11 at 22.20.16.mp4" type="video/mp4">
-      </video></div>
     </div>
+
     <!-- Botões de navegação -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -140,14 +133,14 @@
 
   <!-- Textos Românticos -->
   <div class="romantic-text">
-    <p> O lugar mais confortável do mundo é dentro do teu abraço! te amo 💖</p>
+    <p>O lugar mais confortável do mundo é dentro do teu abraço! Te amo 💖</p>
   </div>
 
-  <!-- Link para música romântica -->
+  <!-- Música romântica -->
   <iframe 
     src="https://open.spotify.com/embed/track/1UVquahdeg6mRYDTHFKRx0?utm_source=generator" 
-    width="90%" height="152" frameborder="0" 
-    allowfullscreen="" 
+    frameborder="0" 
+    allowfullscreen 
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
     loading="lazy">
   </iframe>
@@ -169,3 +162,4 @@
   </script>
 
 </body>
+</html>
