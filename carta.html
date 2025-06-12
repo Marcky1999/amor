@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amor</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #fdf6f9;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #c71585;
+      font-size: 2rem;
+    }
+
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .link {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .link:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    img {
+      height: 500px;
+      max-width: 100%;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    
+
+    /* Media query para telas até 640px */
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .link {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+
+      img {
+        height: 350px;
+      }
+    }
+
+    /* Media query para telas até 390px */
+    @media (max-width: 390px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      .link {
+        font-size: 13px;
+        padding: 5px 8px;
+      }
+
+      img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bem-vindo, Gustavo!</h1>
+
+  <div class="container">
+    <a href="main.html" class="link" target="_blank">Clique aqui</a>
+    <img id="img" src="img/carta.png" alt="Imagem de uma carta de amor" />
+  </div>
+
+</body>
+</html>
